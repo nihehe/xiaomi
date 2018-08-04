@@ -253,10 +253,37 @@ a{
     font-size: 12px;
     line-height: 40px;
     text-align: center;
+    position: relative;
 }
-.shop:hover{
+.shop a{
+    display: block;
+    color: #c2c2c2;
+    font-size: 12px;
+    line-height: 40px;
+} 
+.shop .goods{
+    width:316px;
+    height: 98px;
+    background: #fff;
+    color: #424242;
+    position: absolute;
+    top: -98px;
+    right:0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    font-size: 12px;
+    line-height: 98px;
+    text-align: center;
+    transition: all .2s linear;
+    overflow: hidden;
+    z-index: -80;
+}
+.shop a:hover{
     background: #ffffff;
     color:#ff6700;
+}
+.shop:hover .goods{
+    transform: translateY(138px);
+    z-index: 10;
 }
 /*.nav-right .shop img{*/
     /*float: left;*/
@@ -287,7 +314,6 @@ a{
     width: 1226px;
     height: 100px;
     margin: 0 auto;
-    position: relative;
 }
 .logo{
     width:55px;
@@ -302,19 +328,35 @@ a{
     margin-left: 186px;
     margin-top: 40px;
 }
-.search{
-    width: 243px;
-    height: 48px;
-    border:1px solid #e0e0e0;
+.bsearch{
+    width: 296px;
+    height: 50px;
     float: right;
     margin-top: 25px;
-    padding: 0 10px;
     position: relative;
 }
-
+.bsearch a{
+    display: block;
+}
+.search{
+    width: 223px;
+    height: 48px;
+    float: right;
+    margin-right: 51px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+}
+.bsearch:hover .search{
+    border: 1px solid #b0b0b0;
+}
+.bsearch:hover .search_right{
+    border: 1px solid #b0b0b0;
+}
 .search_right{
     width: 50px;
     height: 48px;
+    float: right;
     border: 1px solid #e0e0e0;
     font-size: 28px;
     line-height: 45px;
@@ -322,31 +364,48 @@ a{
     color: #616161;
     position: absolute;
     right: 0;
-    top:25px;
+    top:0;
     text-align: center;
 }
 .icon-sousuo{
     font-size:20px;
+}
+.bsearch .search_right:hover{
+    background: #ff6700;
+    color: #fff;
+    border: 1px solid #ff6700;
 }
 .mi8{
     display: block;
     width: 41px;
     height: 18px;
     background: #eeeeee;
+    color: #757575;
     position: absolute;
-    left:1047px;
-    bottom:40px;
+    right:138px;
+    bottom:15px;
     font-size: 12px;
+    text-align: center;
 }
 .mi2S{
     display: block;
     width: 71px;
     height: 18px;
     background: #eeeeee;
+    color:#757575;
     position: absolute;
-    right:10px;
-    bottom:40x;
+    right:62px;
+    bottom: 15px;
     font-size: 12px;
+    text-align: center;
+}
+.mi8:hover{
+    background: #ff6700;
+    color: #fff;
+}
+.mi2S:hover{
+    background: #ff6700;
+    color: #fff;
 }
 .navi li{
     float: left;
@@ -533,7 +592,7 @@ a{
     line-height: 46px;
 }
 .intro{
-    width:100%;
+    width:218px;
     height: 27px;
     float: left;
     margin-top: 40px;
@@ -543,7 +602,7 @@ a{
     line-height: 27px;
 }
 .dec{
-    width:100%;
+    width:218px;
     height: 20px;
     color: #adadad;
     font-size: 12px;
@@ -575,6 +634,12 @@ a{
     text-align: center;
     line-height: 42px;
     text-decoration: line-through;
+}
+.flash .picture ul p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
 }
 /*闪购结束*/
 /*banner开始*/
@@ -813,30 +878,15 @@ a{
 .watch:hover .icon{
     color: #ff6700;
 }
-/*.sym{*/
-    /*width: 20px;*/
-    /*height: 20px;*/
-    /*float: right;*/
-    /*margin-left: 8px;*/
-    /*margin-top: 40px;*/
-    /*background: #b0b0b0;*/
-    /*border-radius: 50%;*/
-    /*font-size: 18px;*/
-    /*color:#ffffff;*/
-    /*text-align: center;*/
-    /*line-height: 20px;*/
-/*}*/
 .phone_under{
     width: 100%;
     height:614px;
-
 }
 .left {
     width: 234px;
     height: 614px;
     float: left;
 }
-
 .phone_under .left a img{
     display: block;
     width: 234px;
@@ -905,7 +955,7 @@ a{
     background: #83c44e;
 }
 .phone_under .intro_hea{
-    width:100%;
+    width:218px;
     height: 21px;
     float: left;
     margin-top: 4px;
@@ -914,15 +964,21 @@ a{
     text-align: center;
     line-height: 21px;
 }
-.deca_hea{
-    width:100%;
-    height: 18px;
-    color: #adadad;
-    font-size: 12px;
-    float: left;
-    text-align: center;
-    line-height: 18px;
+.phone_under ul p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
 }
+/*.deca_hea{*/
+    /*width:218px;*/
+    /*height: 18px;*/
+    /*color: #adadad;*/
+    /*font-size: 12px;*/
+    /*float: left;*/
+    /*text-align: center;*/
+    /*line-height: 18px;*/
+/*}*/
 .money_hea {
     width: 100%;
     height: 42px;
@@ -1097,7 +1153,7 @@ a{
     background: #83c44e;
 }
 .intro_hea{
-    width:100%;
+    width:218px;
     height: 21px;
     float: left;
     margin-top: 22px;
@@ -1105,15 +1161,23 @@ a{
     font-size: 14px;
     text-align: center;
     line-height: 21px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
 }
 .deca_hea{
-    width:100%;
+    width:218px;
     height: 18px;
     color: #adadad;
     font-size: 12px;
     float: left;
     text-align: center;
     line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
 }
 .money_hea {
     width: 100%;
@@ -1163,12 +1227,14 @@ a{
     color: #ffffff;
     font-size: 12px;
     line-height: 15px;
+    padding:0;
 }
 .smallunder{
     height: 12px;
     color: rgba(255,255,255,0.5);
     font-size: 12px;
     margin-top: 11px;
+    padding:0;
 }
 .upbox{
     width:100%;
@@ -1195,7 +1261,6 @@ a{
     width:117px;
     height:143px;
     float: left;
-
 }
 .underleft {
     width: 117px;
@@ -1220,6 +1285,10 @@ a{
     color: #000000;
     font-size: 14px;
     line-height: 42px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .money_hea8{
     width: 87px;
@@ -1361,25 +1430,33 @@ a{
     margin-left: 85px;
     background: #83c44e;
 }
-.intro_hea{
-    width:100%;
-    height: 21px;
-    float: left;
-    margin-top: 22px;
-    color: #000000;
-    font-size: 14px;
-    text-align: center;
-    line-height: 21px;
-}
-.deca_hea{
-    width:100%;
-    height: 18px;
-    color: #adadad;
-    font-size: 12px;
-    float: left;
-    text-align: center;
-    line-height: 18px;
-}
+/*.intro_hea{*/
+    /*width:218px;*/
+    /*height: 21px;*/
+    /*float: left;*/
+    /*margin-top: 22px;*/
+    /*color: #000000;*/
+    /*font-size: 14px;*/
+    /*text-align: center;*/
+    /*line-height: 21px;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*padding: 0 8px;*/
+/*}*/
+/*.deca_hea{*/
+    /*width:218px;*/
+    /*height: 18px;*/
+    /*color: #adadad;*/
+    /*font-size: 12px;*/
+    /*float: left;*/
+    /*text-align: center;*/
+    /*line-height: 18px;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*padding: 0 8px;*/
+/*}*/
 .money_hea1{
     width: 50px;
     height: 42px;
@@ -1588,18 +1665,18 @@ a{
     margin-left: 85px;
     background: #83c44e;
 }
-.intro_hea{
-    width:100%;
-    height: 21px;
-    float: left;
-    margin-top: 22px;
-    color: #000000;
-    font-size: 14px;
-    text-align: center;
-    line-height: 21px;
-}
+/*.intro_hea{*/
+    /*width:100%;*/
+    /*height: 21px;*/
+    /*float: left;*/
+    /*margin-top: 22px;*/
+    /*color: #000000;*/
+    /*font-size: 14px;*/
+    /*text-align: center;*/
+    /*line-height: 21px;*/
+/*}*/
 .collocation_under .deca_hea{
-    width:100%;
+    width:218px;
     height: 18px;
     color: #fa6509;
     font-size: 14px;
@@ -1814,18 +1891,18 @@ a{
     margin-left: 85px;
     background: #83c44e;
 }
-.intro_hea{
-    width:100%;
-    height: 21px;
-    float: left;
-    margin-top: 22px;
-    color: #000000;
-    font-size: 14px;
-    text-align: center;
-    line-height: 21px;
-}
+/*.intro_hea{*/
+    /*width:100%;*/
+    /*height: 21px;*/
+    /*float: left;*/
+    /*margin-top: 22px;*/
+    /*color: #000000;*/
+    /*font-size: 14px;*/
+    /*text-align: center;*/
+    /*line-height: 21px;*/
+/*}*/
 .parts_under .deca_hea{
-    width:100%;
+    width:218px;
     height: 18px;
     color: #fa6509;
     font-size: 14px;
@@ -2040,18 +2117,18 @@ a{
     margin-left: 85px;
     background: #83c44e;
 }
-.intro_hea{
-    width:100%;
-    height: 21px;
-    float: left;
-    margin-top: 22px;
-    color: #000000;
-    font-size: 14px;
-    text-align: center;
-    line-height: 21px;
-}
+/*.intro_hea{*/
+    /*width:100%;*/
+    /*height: 21px;*/
+    /*float: left;*/
+    /*margin-top: 22px;*/
+    /*color: #000000;*/
+    /*font-size: 14px;*/
+    /*text-align: center;*/
+    /*line-height: 21px;*/
+/*}*/
 .around_under .deca_hea{
-    width:100%;
+    width:218px;
     height: 18px;
     color: #fa6509;
     font-size: 14px;
@@ -2260,18 +2337,18 @@ a{
     margin-left: 85px;
     background: #83c44e;
 }
-.intro_hea{
-    width:100%;
-    height: 21px;
-    float: left;
-    margin-top: 22px;
-    color: #000000;
-    font-size: 14px;
-    text-align: center;
-    line-height: 21px;
-}
+/*.intro_hea{*/
+    /*width:100%;*/
+    /*height: 21px;*/
+    /*float: left;*/
+    /*margin-top: 22px;*/
+    /*color: #000000;*/
+    /*font-size: 14px;*/
+    /*text-align: center;*/
+    /*line-height: 21px;*/
+/*}*/
 .recommend_under .deca_hea{
-    width:100%;
+    width:218px;
     height: 18px;
     color: #fa6509;
     font-size: 14px;
@@ -2345,7 +2422,7 @@ a{
     margin: 31px 28px 9px 28px;
     color: #000000;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 24px;
 }
 .hot_under .deca_hot{
     width:240px;
@@ -2407,6 +2484,7 @@ a{
     margin-left: 14px;
     background: #ffffff;
     margin-bottom: 0;
+    position: relative;
 }
 .content .right li:last-child{
     transition: all 0.2s linear;
@@ -2514,6 +2592,56 @@ a{
 }
 .content_under .spot li:hover{
     background: #ff6700;
+}
+.cleft{
+    width: 20px;
+    height: 48px;
+    background: #d9d9d9;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    display: none;
+}
+.cright{
+    width: 20px;
+    height: 48px;
+    background: #d9d9d9;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 0;
+    display: none;
+}
+.icon-zuoyoujiantou{
+    font-size: 20px;
+    text-align: center;
+    line-height: 48px;
+    color:#fff;
+    font-weight: bolder;
+}
+.icon-zuoyoujiantou-copy-copy{
+    font-size: 20px;
+    text-align: center;
+    line-height: 48px;
+    color:#fff;
+    font-weight: bolder;
+}
+.content li:hover .cleft{
+    display: block;
+}
+.content li:hover .cright{
+    display: block;
+}
+.content li .cleft:hover{
+    background: #8d8d8d;
+}
+.content li .cright:hover{
+    background: #8d8d8d;
 }
 /*内容结束*/
 /*视频开始*/
@@ -2794,7 +2922,7 @@ a{
 .endup .end-left a{
      display: block;
      float: left;
-     color: #000;
+     color: #757575;
      border-left: 1px solid #757575;
      font-size: 12px;
      padding: 0 4px;
@@ -2839,7 +2967,7 @@ a{
     font-size: 20px;
     line-height: 79px;
     color: #bababa;
-    font-family: 楷体;
+    font-family: "楷体";
 }
 .endpicture{
     width: 430px;

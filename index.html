@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小米商城</title>
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_774011_4we60c1mz1.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_774011_i2c4vfxy6ok.css">
     <script type="text/javascript" async src="https://at.alicdn.com/t/font_774011_neilyls2cf.js"></script>
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -43,7 +43,10 @@
                     <a href class="list">注册</a>
                     <a href class="list">消息通知</a>
                 </div>
-                <a href class="shop"><i class="iconfont icon-gouwuche" ></i> 购物车(0)</a>
+                <div class="shop">
+                    <a href=""><i class="iconfont icon-gouwuche" ></i> 购物车(0)</a>
+                    <div class="goods">购物车中还没有商品，赶紧选购吧！</div>
+                </div>
             </div>
             <!--头部右面结束-->
         </div>
@@ -71,14 +74,16 @@
         </ul>
         <!--导航内容结束-->
         <!--搜索栏开始-->
-        <input type="text" placeholder="" class="search" name="keyword">
-        <div>
-            <a href="" class="mi8">小米8</a>
-            <a href="" class="mi2S">小米MIX 2S</a>
+        <div class="bsearch">
+            <input type="text" placeholder="" class="search" name="keyword">
+            <div>
+                <a href="" class="mi8">小米8</a>
+                <a href="" class="mi2S">小米MIX 2S</a>
+            </div>
+            <a href="" class="search_right">
+                <i class="iconfont icon-sousuo" ></i>
+            </a>
         </div>
-        <a class="search_right">
-            <i class="iconfont icon-sousuo" ></i>
-        </a>
         <!--搜索栏结束-->
     </div>
     <!--导航结束-->
@@ -213,8 +218,8 @@
                     <a href="" target="_blank">
                     <div class="bag-gray">
                         <img src="img/bag-gray.png" alt="">
-                        <div class="intro">小米极简都市双肩包 深灰</div>
-                        <div class="dec">方形立体设计</div>
+                        <p class="intro">小米极简都市双肩包 深灰</p>
+                        <p class="dec">方形立体设计</p>
                         <div class="money">
                             <div class="now-money">119元</div>
                             <div class="past-money">149元</div>
@@ -228,8 +233,8 @@
                     <a href="" target="_blank">
                     <div class="bag-blue">
                         <img src="img/bag-blue.png" alt="">
-                        <div class="intro">90分户外休闲双肩包 蓝色</div>
-                        <div class="dec">不趋同 塑型格</div>
+                        <p class="intro">90分户外休闲双肩包 蓝色</p>
+                        <p class="dec">不趋同 塑型格</p>
                         <div class="money">
                             <div class="now-money">199元</div>
                             <div class="past-money">249元</div>
@@ -242,8 +247,8 @@
                     <a href="" target="_blank">
                     <div class="mouse">
                         <img src="img/mouse.png" alt="">
-                        <div class="intro">小米游戏鼠标 黑色</div>
-                        <div class="dec">掌中游戏利器 为真玩家而生</div>
+                        <p class="intro">小米游戏鼠标 黑色</p>
+                        <p class="dec">掌中游戏利器 为真玩家而生</p>
                         <div class="money">
                             <div class="now-money">229元</div>
                             <div class="past-money">249元</div>
@@ -257,8 +262,8 @@
                     <a href="" target="_blank">
                     <div class="sunglass">
                         <img src="img/sunglass.png" alt="">
-                        <div class="intro">TS尼龙偏光太阳镜 米家定制...</div>
-                        <div class="dec">重塑专业 打造时尚</div>
+                        <p class="intro">TS尼龙偏光太阳镜 米家定制...</p>
+                        <p class="dec">重塑专业 打造时尚</p>
                         <div class="money">
                             <div class="now-money">159元</div>
                             <div class="past-money">199元</div>
@@ -297,40 +302,40 @@
                 <li>
                     <a href="">
                         <img src="img/phone1.png" alt="">
-                        <div class="intro_hea">红米6A</div>
-                        <div class="deca_hea">AI人脸解锁，小巧全面屏，高性能处理器</div>
+                        <p class="intro_hea">红米6A</p>
+                        <p class="deca_hea">AI人脸解锁，小巧全面屏，高性能处理器</p>
                         <div class="money_hea1">599元</div>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <img src="img/phone2.png" alt="">
-                        <div class="intro_hea">小米8 6GB+64GB</div>
-                        <div class="deca_hea">全球首款双频GPS，骁龙845处理器</div>
+                        <p class="intro_hea">小米8 6GB+64GB</p>
+                        <p class="deca_hea">全球首款双频GPS，骁龙845处理器</p>
                         <div class="money_hea1">2699元</div>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <img src="img/phone3.png" alt="">
-                        <div class="intro_hea">小米8 SE 4GB+64GB</div>
-                        <div class="deca_hea">AI 超感光双摄，三星 AMOLED 屏幕</div>
+                        <p class="intro_hea">小米8 SE 4GB+64GB</p>
+                        <p class="deca_hea">AI 超感光双摄，三星 AMOLED 屏幕</p>
                         <div class="money_hea1">1799元</div>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <img src="img/phone4.png" alt="">
-                        <div class="intro_hea">小米MIX 2S 8GB+256GB</div>
-                        <div class="deca_hea">骁龙845 年度旗舰处理器，艺术品般陶瓷...</div>
+                        <p class="intro_hea">小米MIX 2S 8GB+256GB</p>
+                        <p class="deca_hea">骁龙845 年度旗舰处理器，艺术品般陶瓷机身</p>
                         <div class="money_hea1">3999元</div>
                     </a>
                 </li>
                 <li><div class="discount">减200元</div>
                     <a href="">
                         <img src="img/phone5.png" alt="">
-                        <div class="intro_hea">小米6X 4GB+32GB</div>
-                        <div class="deca_hea">全索尼相机，骁龙660 AIE处理器</div>
+                        <p class="intro_hea">小米6X 4GB+32GB</p>
+                        <p class="deca_hea">全索尼相机，骁龙660 AIE处理器</p>
                         <div class="money_hea">
                             <div class="now-money_hea">1399元</div>
                             <div class="past-money_hea">1499元</div>
@@ -341,8 +346,8 @@
                     <div class="discount">享8折</div>
                     <a href="">
                         <img src="img/phone6.png" alt="">
-                        <div class="intro_hea">小米Max 2 4GB+64GB</div>
-                        <div class="deca_hea">6.44''大屏，5300mAh 充电宝级的大电量</div>
+                        <p class="intro_hea">小米Max 2 4GB+64GB</p>
+                        <p class="deca_hea">6.44''大屏，5300mAh 充电宝级的大电量</p>
                         <div class="money_hea">
                             <div class="now-money_hea">1249元</div>
                             <div class="past-money_hea">1699元</div>
@@ -353,8 +358,8 @@
                     <div class="discount">享7折</div>
                     <a href="">
                         <img src="img/phone7.png" alt="">
-                        <div class="intro_hea">小米MIX 2 全陶瓷尊享版</div>
-                        <div class="deca_hea">全面屏2.0，Unibody 全陶瓷</div>
+                        <p class="intro_hea">小米MIX 2 全陶瓷尊享版</p>
+                        <p class="deca_hea">全面屏2.0，Unibody 全陶瓷</p>
                         <div class="money_hea">
                             <div class="now-money_hea">3199元</div>
                             <div class="past-money_hea">4699元</div>
@@ -365,8 +370,8 @@
                     <div class="discount">减100元</div>
                     <a href="">
                         <img src="img/phone8.png" alt="">
-                        <div class="intro_hea">红米S2 3GB+32GB</div>
-                        <div class="deca_hea">前置1600万超大像素智能美拍</div>
+                        <p class="intro_hea">红米S2 3GB+32GB</p>
+                        <p class="deca_hea">前置1600万超大像素智能美拍</p>
                         <div class="money_hea">
                             <div class="now-money_hea">899元</div>
                             <div class="past-money_hea">999元</div>
@@ -405,8 +410,8 @@
                 <li><div class="discount">减200元</div>
                     <a href="">
                         <img src="img/picture1.png" alt="">
-                        <div class="intro_hea">小米电视4A 43英寸青春版</div>
-                        <div class="deca_hea">全高清屏 / 人工智能语音</div>
+                        <p class="intro_hea">小米电视4A 43英寸青春版</p>
+                        <p class="deca_hea">全高清屏 / 人工智能语音</p>
                         <div class="money_hea">
                             <div class="now-money_hea">1499元</div>
                             <div class="past-money_hea">1699元</div>
@@ -422,8 +427,8 @@
                     <div class="discount">减200元</div>
                     <a href="">
                         <img src="img/picture2.png" alt="">
-                        <div class="intro_hea">小米电视4C 50英寸</div>
-                        <div class="deca_hea">4K HDR / 人工智能语音</div>
+                        <p class="intro_hea">小米电视4C 50英寸</p>
+                        <p class="deca_hea">4K HDR / 人工智能语音</p>
                         <div class="money_hea">
                             <div class="now-money_hea">1199元</div>
                             <div class="past-money_hea">2100元</div>
@@ -438,8 +443,8 @@
                 <li>
                     <a href="">
                         <img src="img/picture3.png" alt="">
-                        <div class="intro_hea">13.3"小米笔记本Air i5 8G 256G...</div>
-                        <div class="deca_hea">全金属超薄机身搭配独显</div>
+                        <p class="intro_hea">13.3"小米笔记本Air i5 8G 256G MX150 银色</p>
+                        <p class="deca_hea">全金属超薄机身搭配独显</p>
                         <div class="money_hea1">5199元</div>
                         <div class="small">
                             <p class="smallup">是不是非常有型</p>
@@ -450,8 +455,8 @@
                 <li>
                     <a href="">
                         <img src="img/picture4.png" alt="">
-                        <div class="intro_hea">15.6"小米笔记本Pro i7 16G MX...</div>
-                        <div class="deca_hea">性能更强悍的专业笔记本</div>
+                        <p class="intro_hea">15.6"小米笔记本Pro i7 16G MX150 深空灰</p>
+                        <p class="deca_hea">性能更强悍的专业笔记本</p>
                         <div class="money_hea1">6999元</div>
                         <div class="small">
                             <p class="smallup">刚到手那一刻惊艳到了，完美！外观99分，怕你骄傲...</p>
@@ -462,8 +467,8 @@
                 <li>
                     <a href="">
                         <img src="img/picture5.png" alt="">
-                        <div class="intro_hea">米家空气净化器Pro</div>
-                        <div class="deca_hea">OLED 显示屏幕 / 激光颗粒物传感器</div>
+                        <p class="intro_hea">米家空气净化器Pro</p>
+                        <p class="deca_hea">OLED 显示屏幕 / 激光颗粒物传感器</p>
                         <div class="money_hea1">1499元</div>
                         <div class="small">
                             <p class="smallup">外观很漂亮，有个显示屏，好高大尚，睡眠模式非常安静！</p>
@@ -474,8 +479,8 @@
                 <li>
                     <a href="">
                         <img src="img/picture6.png" alt="">
-                        <div class="intro_hea">米家电水壶</div>
-                        <div class="deca_hea">一杯水，是一家人的安心</div>
+                        <p class="intro_hea">米家电水壶</p>
+                        <p class="deca_hea">一杯水，是一家人的安心</p>
                         <div class="money_hea1">99元</div>
                         <div class="small">
                             <p class="smallup">好不好用我就不说，反正颜值就是正义，其他的管它呢(＊...</p>
@@ -487,8 +492,8 @@
                     <div class="discount1">新品</div>
                     <a href="">
                         <img src="img/picture7.png" alt="">
-                        <div class="intro_hea">米家LED吸顶灯</div>
-                        <div class="deca_hea">用光线，还原理想生活</div>
+                        <p class="intro_hea">米家LED吸顶灯</p>
+                        <p class="deca_hea">用光线，还原理想生活</p>
                         <div class="money_hea1">399元</div>
                         <div class="small">
                             <p class="smallup">真心不错，妹子还有什么灯出来！</p>
@@ -500,7 +505,7 @@
                     <div class="upbox">
                         <div class="upleft">
                             <a href="" target="_blank">
-                                <div class="intro_hea8">小米净水器...</div>
+                                <p class="intro_hea8">小米净水器（厨下式）</p>
                             </a>
                             <div class="money_hea8">1999元</div>
                         </div>
@@ -555,8 +560,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell3.png" alt="">
-                        <div class="intro_hea">米家飞利浦智睿台灯二代</div>
-                        <div class="deca_hea">感知环境光，主动优化场景照明</div>
+                        <p class="intro_hea">米家飞利浦智睿台灯二代</p>
+                        <p class="deca_hea">感知环境光，主动优化场景照明</p>
                         <div class="money_hea1">199元</div>
                         <div class="small">
                             <p class="smallup">一流的服务、一流的设备、一流的技术、一流的设施、星级...</p>
@@ -567,8 +572,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell4.jpg" alt="">
-                        <div class="intro_hea">小米手环3</div>
-                        <div class="deca_hea"></div>
+                        <p class="intro_hea">小米手环3</p>
+                        <p class="deca_hea"></p>
                         <div class="money_hea1">169元</div>
                         <div class="small">
                             <p class="smallup">好，很好，非常好，万水千山总是情，给个女友行不行？</p>
@@ -579,8 +584,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell5.jpg" alt="">
-                        <div class="intro_hea">小米体重秤</div>
-                        <div class="deca_hea">高精度压力传感器 / 手机管理全家健康</div>
+                        <p class="intro_hea">小米体重秤</p>
+                        <p class="deca_hea">高精度压力传感器 / 手机管理全家健康</p>
                         <div class="money_hea1">99元</div>
                         <div class="small">
                             <p class="smallup">祝小米产品销量和品质犹如我体重一直再提升!，唉不说了...</p>
@@ -591,8 +596,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell6.png" alt="">
-                        <div class="intro_hea">米家IH电饭煲 4L</div>
-                        <div class="deca_hea">IH 电磁环绕加热 </div>
+                        <p class="intro_hea">米家IH电饭煲 4L</p>
+                        <p class="deca_hea">IH 电磁环绕加热 </p>
                         <div class="money_hea1">599元</div>
                         <div class="small">
                             <p class="smallup">人生的第一个米家电饭煲！终于到手了！美不胜收！希望煮...</p>
@@ -603,8 +608,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell7.jpg" alt="">
-                        <div class="intro_hea">车载空气净化器(USB车充版)</div>
-                        <div class="deca_hea">高效净化车内空气</div>
+                        <p class="intro_hea">车载空气净化器(USB车充版)</p>
+                        <p class="deca_hea">高效净化车内空气</p>
                         <div class="money_hea1">449元</div>
                         <div class="small">
                             <p class="smallup">真正的米粉</p>
@@ -615,8 +620,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell8.jpg" alt="">
-                        <div class="intro_hea">米家行车记录仪</div>
-                        <div class="deca_hea">晚上能拍清车牌的行车记录仪</div>
+                        <p class="intro_hea">米家行车记录仪</p>
+                        <p class="deca_hea">晚上能拍清车牌的行车记录仪</p>
                         <div class="money_hea1">349元</div>
                         <div class="small">
                             <p class="smallup">我要去云南，我要去北京，我要周游全中国，好的，我先回家</p>
@@ -627,8 +632,8 @@
                 <li>
                     <a href="">
                         <img src="img/intell9.jpg" alt="">
-                        <div class="intro_hea">米家声波电动牙刷</div>
-                        <div class="deca_hea">磁悬浮声波马达，定制多种刷牙模式</div>
+                        <p class="intro_hea">米家声波电动牙刷</p>
+                        <p class="deca_hea">磁悬浮声波马达，定制多种刷牙模式</p>
                         <div class="money_hea1">199元</div>
                         <div class="small">
                             <p class="smallup">很棒，t性价比很高，以前没用过电动牙刷，用电动牙刷确...</p>
@@ -640,7 +645,7 @@
                     <div class="upbox">
                         <div class="upleft">
                             <a href="" target="_blank">
-                                <div class="intro_hea8">小米VR眼镜</div>
+                                <p class="intro_hea8">小米VR眼镜</p>
                             </a>
                             <div class="money_hea8">299元</div>
                         </div>
@@ -694,7 +699,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation3.jpg" alt="">
-                        <div class="intro_hea">  小米AI音箱  </div>
+                        <p class="intro_hea">  小米AI音箱  </p>
                         <div class="deca_hea">299元</div>
                         <div class="money_hea1">5.4万人评价</div>
                         <div class="small">
@@ -706,7 +711,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation4.jpg" alt="">
-                        <div class="intro_hea">  小米无线充电器  </div>
+                        <p class="intro_hea">  小米无线充电器  </p>
                         <div class="deca_hea">99元</div>
                         <div class="money_hea1">909人评价</div>
                         <div class="small">
@@ -718,7 +723,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation5.jpg" alt="">
-                        <div class="intro_hea">  新小米移动电源2（10000mAh）  </div>
+                        <p class="intro_hea">  新小米移动电源2（10000mAh）  </p>
                         <div class="deca_hea">79元</div>
                         <div class="money_hea1">1.2万人评价</div>
                         <div class="small">
@@ -730,7 +735,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation6.jpg" alt="">
-                        <div class="intro_hea">  小米USB充电器快充版（18W）  </div>
+                        <p class="intro_hea">  小米USB充电器快充版（18W）  </p>
                         <div class="deca_hea">29.9元</div>
                         <div class="money_hea1">6315人评价</div>
                         <div class="small">
@@ -742,7 +747,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation7.jpg" alt="">
-                        <div class="intro_hea">  小米随身手电筒  </div>
+                        <p class="intro_hea">  小米随身手电筒  </p>
                         <div class="deca_hea">79元</div>
                         <div class="money_hea1">9452人评价</div>
                         <div class="small">
@@ -754,7 +759,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation8.jpg" alt="">
-                        <div class="intro_hea">  小米移动电源高配版（10000mAh）  </div>
+                        <p class="intro_hea">  小米移动电源高配版（10000mAh）  </p>
                         <div class="deca_hea">149元</div>
                         <div class="money_hea1">2.5万人评价</div>
                         <div class="small">
@@ -766,7 +771,7 @@
                 <li>
                     <a href="">
                         <img src="img/collocation9.jpg" alt="">
-                        <div class="intro_hea">  ZMI双模智能充电器+充电宝  </div>
+                        <p class="intro_hea">  ZMI双模智能充电器+充电宝  </p>
                         <div class="deca_hea">109元</div>
                         <div class="money_hea1">1210人评价</div>
                         <div class="small">
@@ -779,7 +784,7 @@
                     <div class="upbox">
                         <div class="upleft">
                             <a href="" target="_blank">
-                                <div class="intro_hea8">小米移动电源</div>
+                                <p class="intro_hea8">小米移动电源2C（20000mAh）</p>
                             </a>
                             <div class="money_hea8">129元</div>
                         </div>
@@ -833,7 +838,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts3.jpg" alt="">
-                        <div class="intro_hea">  小米8  硅胶保护套  </div>
+                        <p class="intro_hea">  小米8  硅胶保护套  </p>
                         <div class="deca_hea">49元</div>
                         <div class="money_hea1">1125人评价</div>
                         <div class="small">
@@ -845,7 +850,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts4.jpg" alt="">
-                        <div class="intro_hea">  黑鲨游戏钢化膜  </div>
+                        <p class="intro_hea">  黑鲨游戏钢化膜  </p>
                         <div class="deca_hea">29元</div>
                         <div class="money_hea1">303人评价</div>
                         <div class="small">
@@ -857,7 +862,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts5.jpg" alt="">
-                        <div class="intro_hea">  小米8 标准钢化玻璃膜  </div>
+                        <p class="intro_hea">  小米8 标准钢化玻璃膜  </p>
                         <div class="deca_hea">29元</div>
                         <div class="money_hea1">831人评价</div>
                         <div class="small">
@@ -869,7 +874,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts6.jpg" alt="">
-                        <div class="intro_hea">  黑鲨游戏手机保护壳  </div>
+                        <p class="intro_hea">  黑鲨游戏手机保护壳  </p>
                         <div class="deca_hea">29元</div>
                         <div class="money_hea1">102人评价</div>
                         <div class="small">
@@ -881,7 +886,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts7.jpg" alt="">
-                        <div class="intro_hea">  小米平板4 标准钢化玻璃膜  </div>
+                        <p class="intro_hea">  小米平板4 标准钢化玻璃膜  </p>
                         <div class="deca_hea">49元</div>
                         <div class="money_hea1">183人评价</div>
                         <div class="small">
@@ -893,7 +898,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts8.jpg" alt="">
-                        <div class="intro_hea">  小米 8 标准高透贴膜  </div>
+                        <p class="intro_hea">  小米 8 标准高透贴膜  </p>
                         <div class="deca_hea">19元</div>
                         <div class="money_hea1">591人评价</div>
                         <div class="small">
@@ -905,7 +910,7 @@
                 <li>
                     <a href="">
                         <img src="img/parts9.jpg" alt="">
-                        <div class="intro_hea">  小米6X 极简保护壳  </div>
+                        <p class="intro_hea">  小米6X 极简保护壳  </p>
                         <div class="deca_hea">29元</div>
                         <div class="money_hea1">747人评价</div>
                         <div class="small">
@@ -918,7 +923,7 @@
                     <div class="upbox">
                         <div class="upleft">
                             <a href="" target="_blank">
-                                <div class="intro_hea8">小米Max3...</div>
+                                <p class="intro_hea8">小米平板4 标准高透保护膜（通用版）</p>
                             </a>
                             <div class="money_hea8">39元</div>
                         </div>
@@ -973,7 +978,7 @@
                 <li>
                     <a href="">
                         <img src="img/around3.jpg" alt="">
-                        <div class="intro_hea">TS尼龙偏光太阳镜 米家定制灰色</div>
+                        <p class="intro_hea">TS尼龙偏光太阳镜 米家定制灰色</p>
                         <div class="deca_hea">199元</div>
                         <div class="money_hea1">1.5万人评价</div>
                         <div class="small">
@@ -985,7 +990,7 @@
                 <li>
                     <a href="">
                         <img src="img/around4.jpg" alt="">
-                        <div class="intro_hea">米兔招财猫足金吊坠</div>
+                        <p class="intro_hea">米兔招财猫足金吊坠</p>
                         <div class="deca_hea">888元</div>
                         <div class="money_hea1">689人评价</div>
                         <div class="small">
@@ -997,7 +1002,7 @@
                 <li>
                     <a href="">
                         <img src="img/around5.jpg" alt="">
-                        <div class="intro_hea">小米短袖T恤 两件装</div>
+                        <p class="intro_hea">小米短袖T恤 两件装</p>
                         <div class="deca_hea">89元</div>
                         <div class="money_hea1">4850人评价</div>
                         <div class="small">
@@ -1010,7 +1015,7 @@
                     <div class="discount1">新品</div>
                         <a href="">
                             <img src="img/around6.jpg" alt="">
-                            <div class="intro_hea">8H记忆绵护椎腰靠</div>
+                            <p class="intro_hea">8H记忆绵护椎腰靠</p>
                             <div class="deca_hea">89元</div>
                             <div class="money_hea1">1000人评价</div>
                             <div class="small">
@@ -1022,7 +1027,7 @@
                 <li>
                     <a href="">
                         <img src="img/around7.jpg" alt="">
-                        <div class="intro_hea">自动折叠伞 黑</div>
+                        <p class="intro_hea">自动折叠伞 黑</p>
                         <div class="deca_hea">99元</div>
                         <div class="money_hea1">1万人评价</div>
                         <div class="small">
@@ -1034,7 +1039,7 @@
                 <li>
                     <a href="">
                         <img src="img/around8.jpg" alt="">
-                        <div class="intro_hea">小米棒球帽 藏蓝</div>
+                        <p class="intro_hea">小米棒球帽 藏蓝</p>
                         <div class="deca_hea">49元</div>
                         <div class="money_hea1">1261人评价</div>
                         <div class="small">
@@ -1046,7 +1051,7 @@
                 <li>
                     <a href="">
                         <img src="img/around9.jpg" alt="">
-                        <div class="intro_hea">贝医生巴氏牙刷(四色装)</div>
+                        <p class="intro_hea">贝医生巴氏牙刷(四色装)</p>
                         <div class="deca_hea">39.9元</div>
                         <div class="money_hea1">1.1万人评价</div>
                         <div class="small">
@@ -1059,7 +1064,7 @@
                     <div class="upbox">
                         <div class="upleft">
                             <a href="" target="_blank">
-                                <div class="intro_hea8">8H乳胶弹簧...</div>
+                                <p class="intro_hea8">8H乳胶弹簧静音床垫.</p>
                             </a>
                             <div class="money_hea8">1599元</div>
                         </div>
@@ -1099,7 +1104,7 @@
                 <li>
                     <a href="">
                         <img src="img/recommend1.jpg" alt="">
-                        <div class="intro_hea"> 红米5 移动4G+版 2GB内存 </div>
+                        <p class="intro_hea"> 红米5 移动4G+版 2GB内存 </p>
                         <div class="deca_hea">799元</div>
                         <div class="money_hea1">96人好评</div>
                     </a>
@@ -1107,7 +1112,7 @@
                 <li>
                     <a href="">
                         <img src="img/recommend2.jpg" alt="">
-                        <div class="intro_hea"> 小米简约头层小牛皮钱包 </div>
+                        <p class="intro_hea"> 小米简约头层小牛皮钱包 </p>
                         <div class="deca_hea">129元</div>
                         <div class="money_hea1">1.1万人好评</div>
                     </a>
@@ -1115,7 +1120,7 @@
                 <li>
                     <a href="">
                         <img src="img/recommend3.jpg" alt="">
-                        <div class="intro_hea">小米MIX2 全网通版 6GB内存...</div>
+                        <p class="intro_hea">小米MIX2 全网通版 6GB内存...</p>
                         <div class="deca_hea">2599元</div>
                         <div class="money_hea1">1.5万人好评</div>
                     </a>
@@ -1123,7 +1128,7 @@
                 <li>
                     <a href="">
                         <img src="img/recommend4.jpg" alt="">
-                        <div class="intro_hea"> 米家互联网空调 </div>
+                        <p class="intro_hea"> 米家互联网空调 </p>
                         <div class="deca_hea">1999元</div>
                         <div class="money_hea1"></div>
                     </a>
@@ -1131,7 +1136,7 @@
                 <li>
                     <a href="">
                         <img src="img/recommend5.jpg" alt="">
-                        <div class="intro_hea"> 九号护具套装 </div>
+                        <p class="intro_hea"> 九号护具套装 </p>
                         <div class="deca_hea">169元</div>
                         <div class="money_hea1">794人好评</div>
                     </a>
@@ -1205,6 +1210,8 @@
                             <li></li>
                             <li></li>
                         </ul>
+                        <div class="cleft"> <i class="iconfont icon-zuoyoujiantou" ></i></div>
+                        <div class="cright"><i class="iconfont icon-zuoyoujiantou-copy-copy" ></i></div>
                     </a>
                 </li>
                 <li class="theme">
@@ -1220,6 +1227,8 @@
                             <li></li>
                             <li></li>
                         </ul>
+                        <div class="cleft"><i class="iconfont icon-zuoyoujiantou" ></i></div>
+                        <div class="cright"><i class="iconfont icon-zuoyoujiantou-copy-copy" ></i></div>
                     </a>
                 </li>
                 <li class="game">
@@ -1235,6 +1244,8 @@
                             <li></li>
                             <li></li>
                         </ul>
+                        <div class="cleft"><i class="iconfont icon-zuoyoujiantou" ></i></div>
+                        <div class="cright"><i class="iconfont icon-zuoyoujiantou-copy-copy" ></i></div>
                     </a>
                 </li>
                 <li class="use">
@@ -1250,6 +1261,8 @@
                             <li></li>
                             <li></li>
                         </ul>
+                        <div class="cleft"><i class="iconfont icon-zuoyoujiantou" ></i></div>
+                        <div class="cright"><i class="iconfont icon-zuoyoujiantou-copy-copy" ></i></div>
                     </a>
                 </li>
             </ul>
@@ -1420,7 +1433,7 @@
                     <ul>
                         <li>&copy;mi.com</li>
                         <li>京ICP证110507号</li>
-                        <li><京ICP备10046444号</li>
+                        <li>京ICP备10046444号</li>
                         <li>京公网安备11010802020134号</li>
                         <li>京网文[2017]1530-131号</li>
                     </ul>
