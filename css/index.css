@@ -657,6 +657,8 @@ a{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 5;
+    transition: all .8s linear;
 }
 .banner-picture li a{
     width:100%;
@@ -758,6 +760,7 @@ a{
     position: absolute;
     bottom: 25px;
     right: 35px;
+    z-index: 20;
 }
 .banner .spot li{
     width: 6px;
@@ -767,9 +770,14 @@ a{
     float: left;
     margin-right: 10px;
     border-radius: 50%;
+
 }
 .banner .spot li:last-child{
     margin-right: 0;
+}
+
+.banner .spot .click{
+    background: #ffffff;
 }
 .banner .spot li:hover{
     background: #ffffff;
@@ -784,6 +792,7 @@ a{
     margin-top: auto;
     margin-bottom: auto;
     background: url(../img/icon-slides.png) no-repeat -83px 0;
+    z-index: 20;
 }
 .btnLeft:hover{
     background: url(../img/icon-slides.png) no-repeat 0 0;
@@ -798,6 +807,7 @@ a{
     margin-top: auto;
     margin-bottom: auto;
     background: url(../img/icon-slides.png) no-repeat -125px 0;
+    z-index: 20;
 }
 .btnRight:hover{
     background: url(../img/icon-slides.png) no-repeat -42px 0;
@@ -1058,6 +1068,7 @@ a{
     height:674px;
     margin: 20px auto 0;
     background: #f5f5f5;
+
 }
 .hea_on{
     width: 100%;
@@ -1082,6 +1093,7 @@ a{
     border-bottom: 2px solid rgba(0,0,0,0);
     padding-bottom: 4px;
     margin-top: 23px;
+    color: #000000;
 }
 .hea_onright li a{
     width:100%;
@@ -1092,13 +1104,14 @@ a{
 .hea_onright li:last-child{
     margin-right: 0;
 }
-.hea_onright li a:hover{
-    color: #ff6700;
-    border-bottom: 2px solid #ff6700;
-}
+/*.hea_onright li:hover a{*/
+    /*color: #ff6700;*/
+    /*border-bottom: 2px solid #ff6700;*/
+/*}*/
 .hea_under{
     width: 100%;
     height:614px;
+    position: relative;
 }
 .left {
     width: 234px;
@@ -1121,10 +1134,14 @@ a{
     width: 234px;
     height: 300px;
 }
-.right{
+.hea .right{
     width: 992px;
     height: 614px;
     float: left;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
 }
 .right li{
     width: 234px;
@@ -1403,6 +1420,7 @@ a{
 .intell_under{
     width: 100%;
     height:614px;
+    position: relative;
 }
 .left {
     width: 234px;
@@ -1419,10 +1437,14 @@ a{
     width: 234px;
     height: 300px;
 }
-.right{
+.intell .right{
     width: 992px;
     height: 614px;
     float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
 }
 .right li{
     width: 234px;
@@ -1638,6 +1660,7 @@ a{
 .collocation_under{
     width: 100%;
     height:614px;
+    position: relative;
 }
 .left {
     width: 234px;
@@ -1654,10 +1677,13 @@ a{
     width: 234px;
     height: 300px;
 }
-.right{
+.collocation .right{
     width: 992px;
     height: 614px;
     float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .right li{
     width: 234px;
@@ -1857,13 +1883,14 @@ a{
 .parts_onright li:last-child{
     margin-right: 0;
 }
-.parts_onright li a:hover{
-    color: #ff6700;
-    border-bottom: 2px solid #ff6700;
-}
+/*.parts_onright li a:hover{*/
+    /*color: #ff6700;*/
+    /*border-bottom: 2px solid #ff6700;*/
+/*}*/
 .parts_under{
     width: 100%;
     height:614px;
+    position: relative;
 }
 .left {
     width: 234px;
@@ -1880,10 +1907,14 @@ a{
     width: 234px;
     height: 300px;
 }
-.right{
+.parts_under .right{
     width: 992px;
     height: 614px;
     float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
 }
 .right li{
     width: 234px;
@@ -2090,6 +2121,7 @@ a{
 .around_under{
     width: 100%;
     height:614px;
+    position: relative;
 }
 .left {
     width: 234px;
@@ -2106,10 +2138,14 @@ a{
     width: 234px;
     height: 300px;
 }
-.right{
+.around .right{
     width: 992px;
     height: 614px;
     float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
 }
 .right li{
     width: 234px;
@@ -2532,15 +2568,47 @@ a{
 }
 .content .right .book{
     border-top: 1px solid #ffac13;
+    position: relative;
+}
+.content .right .book .book1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    z-index: 5;
 }
 .content .right .theme{
     border-top: 1px solid #83c44e;
+    position: relative;
+}
+.content .right .theme .theme1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    z-index: 5;
 }
 .content .right .game{
     border-top: 1px solid #e53935;
+    position: relative;
+}
+.content .right .game .game1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    z-index: 5;
 }
 .content .right .use{
     border-top: 1px solid #2196f3;
+    position: relative;
+}
+.content .right .use .use1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    z-index: 5;
 }
 .content .right li:first-child{
     margin-left: 0;
@@ -2603,32 +2671,40 @@ a{
     font-size: 12px;
     line-height: 57px;
 }
-.content_under .spot{
+.content_under .spot2{
     width: 140px;
     height: 10px;
-    margin-bottom: 25px;
-    margin-top: 27px;
-    margin-left: 92px;
     float: left;
+    z-index: 10;
+    position: absolute;
+    left: 78px;
+    bottom: 25px;
 }
-.content_under .spot li{
+.content_under .spot2 li{
     width: 6px;
     height: 6px;
     background: rgba(0,0,0,0.4);
     /*border: 2px solid #9e9f9f;*/
     float: left;
-    margin-right: 18px;
     border-radius: 50%;
+    margin-right: 18px;
+    border: 2px solid rgba(255,255,255,1);
 }
 .content_under .spot1{
     width: 100px;
-    margin-left: 109px;
+    margin-left: 20px;
+    z-index: 10;
 }
-.content_under .spot li:last-child{
+.content_under .spot2 li:last-child{
     margin-right: 0;
 }
-.content_under .spot li:hover{
+.content_under .spot2 li:hover{
     background: #ff6700;
+    transform: translateY(0);
+}
+.content_under .spot2 li:last-child:hover{
+    background: #ff6700;
+    transform: translateY(0);
 }
 .cleft{
     width: 20px;
@@ -2641,6 +2717,7 @@ a{
     margin-bottom: auto;
     left: 0;
     display: none;
+    z-index: 10;
 }
 .cright{
     width: 20px;
@@ -2653,6 +2730,7 @@ a{
     margin-bottom: auto;
     right: 0;
     display: none;
+    z-index: 10;
 }
 .icon-zuoyoujiantou{
     font-size: 20px;
