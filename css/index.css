@@ -727,6 +727,15 @@ a{
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     display: none;
 }
+.asideBox1{
+    width: 745px;
+}
+.asideBox2{
+    width: 497px;
+}
+.asideBox3{
+    width: 249px;
+}
 .asideBox ul{
     width: 248px;
     float: left;
@@ -748,8 +757,16 @@ a{
     transition: color .2s;
     box-sizing: border-box;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
+
 }
+.asidebox .aside .asideBox ul li a img{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    float: left;
+}
+
 .asidebox .aside .asideBox ul li a:hover{
     color: #ff6700;
     background: white;
@@ -2560,7 +2577,7 @@ a{
     position: relative;
 }
 .content .right li:last-child{
-    transition: all 0.2s linear;
+    transition: translateY 0.2s linear;
 }
 .content .right li:last-child:hover{
     transform: translateY(-2px);
@@ -2572,10 +2589,9 @@ a{
 }
 .content .right .book .book1{
     position: absolute;
-    left: 0;
+    left: 296px;
     top: 0;
     margin-left: 0;
-    z-index: 5;
 }
 .content .right .theme{
     border-top: 1px solid #83c44e;
@@ -2583,10 +2599,9 @@ a{
 }
 .content .right .theme .theme1{
     position: absolute;
-    left: 0;
+    left: 296px;
     top: 0;
     margin-left: 0;
-    z-index: 5;
 }
 .content .right .game{
     border-top: 1px solid #e53935;
@@ -2594,10 +2609,9 @@ a{
 }
 .content .right .game .game1{
     position: absolute;
-    left: 0;
+    left: 296px;
     top: 0;
     margin-left: 0;
-    z-index: 5;
 }
 .content .right .use{
     border-top: 1px solid #2196f3;
@@ -2605,10 +2619,9 @@ a{
 }
 .content .right .use .use1{
     position: absolute;
-    left: 0;
+    left: 296px;
     top: 0;
     margin-left: 0;
-    z-index: 5;
 }
 .content .right li:first-child{
     margin-left: 0;
@@ -2694,6 +2707,10 @@ a{
     width: 100px;
     margin-left: 20px;
     z-index: 10;
+}
+.content_under .spot2 .click{
+    background: white;
+    border: 2px solid #ff6700
 }
 .content_under .spot2 li:last-child{
     margin-right: 0;

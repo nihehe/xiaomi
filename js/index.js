@@ -10,7 +10,7 @@ window.onload=function () {
     }
     //侧导航
     let aside=document.getElementsByClassName("as");
-    let asideBox=document.getElementsByClassName("asideBox");
+    let asideBox=document.querySelectorAll(".asideBox");
     for (let i=0;i<aside.length;i++){
         aside[i].onmouseenter=function () {
             asideBox[i].style.display="block";
@@ -128,29 +128,114 @@ window.onload=function () {
         }
    }
    //内容
-    let book1=document.getElementsByClassName("book1");
-    let book=document.getElementsByClassName("book")[0];
-    let spot2=book.getElementsByClassName("spot2 spot1")[0];
-    let spot2_lis=spot2.getElementsByTagName("li");
-    console.log(spot2_lis, book1);
-    let cleft=book.getElementsByClassName("cleft");
-    let cright=book.getElementsByClassName("cright");
-    console.log(cright);
-    let num1=0;
-    cright.onclick=function () {
-        num1++;
-        if (num1==book1.length){
-            num1=0;
+    let width_content=document.querySelector(".width-content");
+    let width=parseInt(getComputedStyle(width_content,null).width);
+    function content(name,spot,Left,Right) {
+        let now=next=0;
+        let flag=true;
+        function move_content() {
+            next++;
+            if (next==name.length){
+                next=0;
+            }
+            name[next].style.left=width+"px";
+            animate(name[now],{left:-width},300);
+            animate(name[next],{left:0},300,function () {
+                flag=true;
+            });
+            spot[now].classList.remove("click");
+            spot[next].classList.add("click");
+            now=next;
         }
-        for (let i=0;i<book1.length;i++){
-            book1[i].style.zIndex="5";
-            spot2_lis[i].style.border="2px solid rgba(255,255,255,1)";
-            spot2_lis[i].style.background="rgba(0,0,0,0.4)";
+        function moveL_content() {
+            next--;
+            if (next<0){
+                next=name.length-1;
+            }
+            name[next].style.left=-width+"px";
+            animate(name[now],{left:width},300);
+            animate(name[next],{left:0},300,function () {
+                flag=true;
+            });
+            spot[now].classList.remove("click");
+            spot[next].classList.add("click");
+            now=next;
         }
-        book1[num1].style.zIndex="10";
-        spot2_lis[num1].style.border="2px solid #ff6700";
-        spot2_lis[num1].style.background="white";
+        Right.onclick=function () {
+            if (flag==false){
+                return;
+            }
+            if (next==name.length-1){
+                next=name.length-1;
+                return;
+            }
+            flag=false;
+            move_content();
+        }
+        Left.onclick=function () {
+            if (flag==false){
+                return;
+            }
+            if (next==0){
+                return;
+            }
+            flag=false;
+            moveL_content();
+        }
+        spot.forEach(function (v,i) {
+            v.onclick=function () {
+                if (now==i){
+                    return;
+                }
+                else if(now>i){
+                    name[i].style.left=-width+"px";
+                    animate(name[now],{left:width},300);
+                    animate(name[i],{left:0},300,function () {
+                        flag=true;
+                    });
+                    spot[now].classList.remove("click");
+                    spot[i].classList.add("click");
+                }
+                else {
+                    name[i].style.left=width+"px";
+                    animate(name[now],{left:-width},300);
+                    animate(name[i],{left:0},300,function () {
+                        flag=true;
+                    });
+                    spot[now].classList.remove("click");
+                    spot[i].classList.add("click");
+                }
+                next=now=i;
+            }
+        })
     }
+    //book
+    let book=document.querySelector(".book");
+    let book1=document.querySelectorAll(".book1");
+    let cleft=book.querySelector(".cleft");
+    let cright=book.querySelector(".cright");
+    let lis=book.querySelectorAll(".spot2 li");
+    content(book1,lis,cleft,cright);
 
-
+    //theme
+    let theme=document.querySelector(".theme");
+    let theme1=document.querySelectorAll(".theme1");
+    let cleft1=theme.querySelector(".cleft");
+    let cright1=theme.querySelector(".cright");
+    let lis1=theme.querySelectorAll(".spot2 li");
+    content(theme1,lis1,cleft1,cright1);
+    //game
+    let game=document.querySelector(".game");
+    let game1=document.querySelectorAll(".game1");
+    let cleft2=game.querySelector(".cleft");
+    let cright2=game.querySelector(".cright");
+    let lis2=game.querySelectorAll(".spot2 li");
+    content(game1,lis2,cleft2,cright2);
+    //use
+    let use=document.querySelector(".use");
+    let use1=document.querySelectorAll(".use1");
+    let cleft3=use.querySelector(".cleft");
+    let cright3=use.querySelector(".cright");
+    let lis3=use.querySelectorAll(".spot2 li");
+    content(use1,lis3,cleft3,cright3);
 }
