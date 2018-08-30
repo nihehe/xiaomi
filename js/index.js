@@ -130,8 +130,11 @@ window.onload=function () {
    //内容
     let width_content=document.querySelector(".width-content");
     let width=parseInt(getComputedStyle(width_content,null).width);
-    function content(name,spot,Left,Right) {
-        let now=next=0;
+    function content(name,now,next) {
+        let Left=name.querySelector(".cleft");
+        let Right=name.querySelector(".cright");
+        let spot=name.querySelectorAll(".spot2 li");
+        now=next=0;
         let flag=true;
         function move_content() {
             next++;
@@ -215,7 +218,9 @@ window.onload=function () {
     let cleft=book.querySelector(".cleft");
     let cright=book.querySelector(".cright");
     let lis=book.querySelectorAll(".spot2 li");
-    content(book1,lis,cleft,cright);
+    let now1=next1=0;
+    content(book1,lis,cleft,cright,now1,next1);
+
 
     //theme
     let theme=document.querySelector(".theme");
@@ -223,19 +228,22 @@ window.onload=function () {
     let cleft1=theme.querySelector(".cleft");
     let cright1=theme.querySelector(".cright");
     let lis1=theme.querySelectorAll(".spot2 li");
-    content(theme1,lis1,cleft1,cright1);
+    let now2=next2=0;
+    content(theme1,lis1,cleft1,cright1,now2,next2);
     //game
     let game=document.querySelector(".game");
     let game1=document.querySelectorAll(".game1");
     let cleft2=game.querySelector(".cleft");
     let cright2=game.querySelector(".cright");
     let lis2=game.querySelectorAll(".spot2 li");
-    content(game1,lis2,cleft2,cright2);
+    let now3=next3=0;
+    content(game1,lis2,cleft2,cright2,now3,next3);
     //use
     let use=document.querySelector(".use");
     let use1=document.querySelectorAll(".use1");
     let cleft3=use.querySelector(".cleft");
     let cright3=use.querySelector(".cright");
     let lis3=use.querySelectorAll(".spot2 li");
-    content(use1,lis3,cleft3,cright3);
+    let now4=next4=0;
+    content(use1,lis3,cleft3,cright3,now4,next4);
 }
