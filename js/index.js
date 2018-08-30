@@ -130,10 +130,7 @@ window.onload=function () {
    //内容
     let width_content=document.querySelector(".width-content");
     let width=parseInt(getComputedStyle(width_content,null).width);
-    function content(name,now,next) {
-        let Left=name.querySelector(".cleft");
-        let Right=name.querySelector(".cright");
-        let spot=name.querySelectorAll(".spot2 li");
+    function content(name,spot,Left,Right,now,next) {
         now=next=0;
         let flag=true;
         function move_content() {
