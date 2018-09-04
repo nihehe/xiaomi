@@ -108,7 +108,7 @@ window.onload=function () {
         clearInterval(t);
     }
     banner.onmouseleave=function () {
-        t=setInterval(move,2000);
+        t=setInterval(move,3000);
     }
     btnLeft.onclick=function () {
         moveL();
@@ -243,4 +243,150 @@ window.onload=function () {
     let lis3=use.querySelectorAll(".spot2 li");
     let now4=next4=0;
     content(use1,lis3,cleft3,cright3,now4,next4);
+
+
+    //为你推荐
+    let recommend_left=document.querySelector(".recommend_on .left");
+    let recommend_right=document.querySelector(".recommend_on .right");
+    let recommend_under=document.querySelector(".recommend_under");
+    let recommend=document.querySelector(".recommend");
+    let widths=parseInt(getComputedStyle(recommend,null).width);
+    let times=0;
+    recommend_right.onclick=function () {
+        times++;
+        if (times==3){
+            times=2;
+        }
+        recommend_under.style.transform="translateX("+(-(widths+14)*times)+"px)";
+        if (times==2){
+            recommend_right.style.color="#e0e0e0";
+        }else{
+            recommend_left.style.color="#393939";
+        }
+    }
+    recommend_left.onclick=function () {
+        times--;
+        if (times==-1){
+            times=0;
+        }
+        recommend_under.style.transform="translateX("+(-(widths+14)*times)+"px)";
+        if (times==0){
+            recommend_left.style.color="#e0e0e0";
+        }else{
+            recommend_right.style.color="#393939";
+        }
+    }
+    recommend_right.onmouseenter=function () {
+        if (times==2){
+            recommend_right.style.color="#e0e0e0";
+        }else{
+            recommend_right.style.color="#ff6700";
+        }
+    }
+    recommend_right.onmouseleave=function () {
+        if (times==2){
+            recommend_right.style.color="#e0e0e0";
+        }else{
+            recommend_right.style.color="#393939";
+        }
+    }
+    recommend_left.onmouseenter=function () {
+        if (times==0){
+            recommend_left.style.color="#e0e0e0";
+        }else{
+            recommend_left.style.color="#ff6700";
+        }
+    }
+    recommend_left.onmouseleave=function () {
+        if (times==0){
+            recommend_left.style.color="#e0e0e0";
+        }else{
+            recommend_left.style.color="#393939";
+        }
+    }
+    //闪购
+    let ul=document.querySelector(".quan ul");
+    let flash_right=document.querySelector(".flash .right");
+    let flash_left=document.querySelector(".flash .left");
+    let walk=0;
+    flash_right.onclick=function () {
+        walk++;
+        if(walk==3){
+            walk=2;
+        }
+        ul.style.transform="translateX(-992px)";
+        if (walk==2){
+            ul.style.transform="translateX(-1240px)";
+            flash_right.style.color="#e0e0e0";
+        }
+        else{
+            flash_left.style.color="#393939";
+        }
+    }
+    flash_left.onclick=function () {
+        walk--;
+        if(walk==-1){
+            walk=0;
+        }
+        ul.style.transform="translateX(-248px)";
+        if (walk==0){
+            ul.style.transform="translateX(0)";
+            flash_left.style.color="#e0e0e0";
+        }
+        else{
+            flash_right.style.color="#393939";
+        }
+    }
+    flash_right.onmouseenter=function () {
+        if (walk==2){
+            flash_right.style.color="#e0e0e0";
+        }else{
+            flash_right.style.color="#ff6700";
+        }
+    }
+    flash_right.onmouseleave=function () {
+        if (walk==2){
+            flash_right.style.color="#e0e0e0";
+        }else{
+            flash_right.style.color="#393939";
+        }
+    }
+    flash_left.onmouseenter=function () {
+        if (walk==0){
+            flash_left.style.color="#e0e0e0";
+        }else{
+            flash_left.style.color="#ff6700";
+        }
+    }
+    flash_left.onmouseleave=function () {
+        if (walk==0){
+            flash_left.style.color="#e0e0e0";
+        }else{
+            flash_left.style.color="#393939";
+        }
+    }
+    //导航出现
+    let nav=document.querySelector(".navi");
+    let navilis=document.querySelectorAll(".navi li");
+    let daohangbig=document.querySelector(".daohangbig");
+    let daohang=document.querySelectorAll(".daohang");
+    nav.onmouseenter=function () {
+        daohangbig.style.height="230px";
+        navilis.forEach(function (v,i) {
+            v.onmouseenter=function () {
+                daohang.forEach(function (element) {
+                    element.style.zIndex="40";
+                })
+                daohang[i].style.zIndex="50";
+            }
+            daohang[i].onmouseenter=function(){
+                daohang[i].style.zIndex="50";
+            }
+        })
+    }
+
+    nav.onmouseleave=function () {
+        daohangbig.style.height="0";
+    }
+
 }
