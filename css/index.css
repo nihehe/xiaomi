@@ -214,6 +214,7 @@ a{
     width: 1226px;
     height: 40px;
     margin: 0 auto;
+    background: #333333;
 }
 .nav-left{
     width:650px;
@@ -888,7 +889,7 @@ a{
     padding: 2px 0;
 }
 .asidebox .aside .asideBox ul li{
-    width: 265px;
+    width: 248px;
     height: 76px;
 }
 .asidebox .aside .asideBox ul li:first-child{

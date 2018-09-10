@@ -1,4 +1,4 @@
-window.onload=function () {
+onload=function () {
     //购物车
     let shop=document.getElementsByClassName("shop");
     let goods=document.getElementsByClassName("goods");
@@ -7,17 +7,6 @@ window.onload=function () {
     }
     shop[0].onmouseleave=function () {
         goods[0].style.height="0";
-    }
-    //侧导航
-    let aside=document.getElementsByClassName("as");
-    let asideBox=document.querySelectorAll(".asideBox");
-    for (let i=0;i<aside.length;i++){
-        aside[i].onmouseenter=function () {
-            asideBox[i].style.display="block";
-        }
-        aside[i].onmouseleave=function () {
-            asideBox[i].style.display="none";
-        }
     }
     //家电
     let hea_onright=document.getElementsByClassName("hea_onright")[0];
@@ -68,65 +57,6 @@ window.onload=function () {
     let around_under=document.getElementsByClassName("around_under")[0];
     let right4=around_under.getElementsByClassName("right");
     f(around_lis,a4,right4);
-    //轮播图
-    let banner_picture=document.getElementsByClassName("banner-picture")[0];
-    let banner_lis=banner_picture.getElementsByTagName("li");
-    let banner=document.getElementsByClassName("banner")[0];
-    let spot=banner.getElementsByClassName("spot")[0];
-    let spot_lis=spot.getElementsByTagName("li");
-    let btnLeft=banner.getElementsByClassName("btnLeft")[0];
-    let btnRight=banner.getElementsByClassName("btnRight")[0];
-    let num=0;
-    let t=setInterval(move,3000);
-    function move() {
-        num++;
-        if (num==banner_lis.length){
-            num=0;
-        }
-        for (let i=0;i<banner_lis.length;i++){
-            banner_lis[i].style.zIndex="5";
-            spot_lis[i].className="";
-        }
-        banner_lis[num].style.zIndex="10";
-        spot_lis[num].className="click";
-
-    }
-    function moveL() {
-        num--;
-        if (num<0){
-            num=banner_lis.length-1;
-        }
-        for (let i=0;i<banner_lis.length;i++){
-            banner_lis[i].style.zIndex="5";
-            spot_lis[i].className="";
-        }
-        banner_lis[num].style.zIndex="10";
-        spot_lis[num].className="click";
-
-    }
-    banner.onmouseenter=function () {
-        clearInterval(t);
-    }
-    banner.onmouseleave=function () {
-        t=setInterval(move,3000);
-    }
-    btnLeft.onclick=function () {
-        moveL();
-    }
-    btnRight.onclick=function () {
-        move();
-    }
-    for (let i=0;i<spot_lis.length;i++){
-        spot_lis[i].onclick=function () {
-            for (let j=0;j<banner_lis.length;j++){
-                banner_lis[j].style.zIndex="5";
-                spot_lis[j].className="";
-            }
-            banner_lis[i].style.zIndex="10";
-            spot_lis[i].className="click";
-            num=i;
-        }
-   }
    //内容
     let width_content=document.querySelector(".width-content");
     let width=parseInt(getComputedStyle(width_content,null).width);
@@ -365,28 +295,6 @@ window.onload=function () {
             flash_left.style.color="#393939";
         }
     }
-    //导航出现
-    let nav=document.querySelector(".navi");
-    let navilis=document.querySelectorAll(".navi li");
-    let daohangbig=document.querySelector(".daohangbig");
-    let daohang=document.querySelectorAll(".daohang");
-    nav.onmouseenter=function () {
-        daohangbig.style.height="230px";
-        navilis.forEach(function (v,i) {
-            v.onmouseenter=function () {
-                daohang.forEach(function (element) {
-                    element.style.zIndex="40";
-                })
-                daohang[i].style.zIndex="50";
-            }
-            daohang[i].onmouseenter=function(){
-                daohang[i].style.zIndex="50";
-            }
-        })
-    }
 
-    nav.onmouseleave=function () {
-        daohangbig.style.height="0";
-    }
 
 }
